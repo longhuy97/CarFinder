@@ -1,0 +1,144 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.contener {
+    height: 700px;
+    width: 100%;
+    border: solid black 0.1em;
+    background-image: url(https://image.freepik.com/free-vector/abstract-technology-particle-background_52683-25766.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+form {
+    border: solid rgb(70, 70, 68) 0.01em;
+    background-color: rgb(187, 197, 197);
+    border-radius: 2%;
+    width: 30%;
+    height: 75%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    color: black;
+    font-size: 35px;
+    padding: 20px;
+    margin-top: -30px;
+    margin-bottom: -20px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.check_radio {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: -20px;
+    width: 90%;
+}
+
+.check_radio input {
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.input_password,
+.input_email,
+.input_address,
+.input_user {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input_password input,
+.input_email input,
+.input_address input,
+.input_user input {
+    padding-left: 5px;
+    border: solid white 1px;
+    border-radius: 7px;
+}
+
+.sex {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.sex .male {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.sex .female {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin-right: -50px;
+}
+
+.sex .male input {
+    width: 20px;
+    height: 20px;
+    margin-top: 14px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.sex .female input {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 14px;
+}
+
+input {
+    width: 80%;
+    height: 30px;
+    border-radius: 5%;
+}
+
+.note {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 90%;
+    margin-left: 40px;
+}
+
+.note a {
+    text-decoration: none;
+}
+
+button {
+    border: solid rgb(53, 60, 63) 1px;
+    border-radius: 7px;
+    width: 130px;
+    height: 35px;
+    margin-top: 10px;
+    background-color: rgb(53, 60, 63);
+    color: rgb(255, 255, 255);
+}

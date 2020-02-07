@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <title>login</title>
+</head>
+
+<body>
+    <div class="contener">
+        <form action="#" method="post">
+            {% csrf_token %}
+            {% for key, value in form.errors.items %}
+                {{value}}
+            {% endfor %}
+            <div class="title">
+                <p><b>LOGIN</b></p>
+            </div>
+            <div class="input">
+                <div class="input_user">
+{#                    <input type="text" placeholder="User name" >#}
+                    {{ form.username }}
+                </div>
+                <br>
+                <div class="input_password">
+{#                    <input type="password"  placeholder="Password" >#}
+                    {{ form.password }}
+
+
+                </div>
+            </div>
+            <br>
+            <div class="check_radio">
+                <input type="radio" name="luumk" value="lưu">
+                <p>Lưu mật khẩu</p>
+            </div>
+
+            <div class="note">
+                <a href="#">Quên mật khẩu</a>
+            </div>
+            <input type="hidden" name="next" value="/admin"/>
+            <button type="submit">Đăng Nhập</button>
+        </form>
+    </div>
+</body>
+
+</html>
