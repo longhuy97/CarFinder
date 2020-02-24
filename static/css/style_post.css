@@ -187,6 +187,22 @@ body {
     width: 100%;
 }
 
+.dangki {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-update {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-update button:hover {
+    border: solid rgb(101, 102, 101) 0.2px;
+    background-color: rgb(103, 104, 103);
+}
+
 .null {
     height: 300px;
 }

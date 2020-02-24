@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.views.generic import TemplateView
-from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import path, include
 from account import views
 from django.contrib.auth import views as auth_views
+from post import views as post_views
 
 
 
@@ -25,8 +28,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='page/base.html')),  
     path('admin/', admin.site.urls),
     path('login/', auth_views.LoginView.as_view(template_name="account/login.html"), name='login'),
-
     path('register/', views.register, name='register'),
-
-
-]
+    # path('post/', post_views.PostView, name='post'),
+    path('post/', include('post.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

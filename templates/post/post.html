@@ -1,0 +1,121 @@
+{% extends "page/base.html" %} {% block link_css %} href="/static/css/style_post.css" {% endblock link_css %} {% block title %} post {% endblock title %} {% block left_content %} {% endblock left_content %} {% block content %}
+<form action="{% url 'insert_post' %}" method="POST" autocomplete="off" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row topic">
+        <div class="col-sm-3">
+            <p>Chủ đề bài viết:</p>
+        </div>
+        <div class="col-sm-8 ip-topic">
+            <input type="text" placeholder="Chủ đề của bạn" autofocus name="title">
+        </div>
+        <div class="col-sm-1">
+        </div>
+
+    </div>
+    <div class="row content">
+        <div class="col-sm-3">
+            <p>Nội dung bài viết:</p>
+        </div>
+        <div class="col-sm-8 ip-content">
+            <textarea rows="5" wrap="soft" placeholder="Nội dung bài viết"></textarea>
+        </div>
+        <div class="col-sm-1">
+        </div>
+    </div>
+    <div class="row date-start">
+        <div class="col-sm-3">
+            <p>Ngày khởi hành:</p>
+        </div>
+        <div class="col-sm-3 ip-date-start">
+            <input type="date">
+        </div>
+        <div class="col-sm-5">
+        </div>
+    </div>
+    <div class="row time-start">
+        <div class="col-sm-3">
+            <p>Giờ bắt đầu di chuyển:</p>
+        </div>
+        <div class="col-sm-3 ip-time-start">
+            <input type="time">
+        </div>
+        <div class="col-sm-5">
+        </div>
+    </div>
+    <div class="row time-end">
+        <div class="col-sm-3">
+            <p>Giờ dự kiến đến nơi:</p>
+        </div>
+        <div class="col-sm-3 ip-time-end">
+            <input type="time">
+        </div>
+        <div class="col-sm-5">
+        </div>
+    </div>
+    <div class="row address-start">
+        <div class="col-sm-3">
+            <p>Địa điểm khởi hành:</p>
+        </div>
+        <div class="col-sm-8 ip-address-start">
+            <input type="text" placeholder="Địa điểm đón">
+        </div>
+        <div class="col-sm-1">
+        </div>
+    </div>
+    <div class="row address-end">
+        <div class="col-sm-3">
+            <p>Địa điểm đến:</p>
+        </div>
+        <div class="col-sm-8 ip-address-end">
+            <input type="text" placeholder="Địa điểm đến">
+        </div>
+        <div class="col-sm-1">
+        </div>
+    </div>
+    <div class="row coachbox">
+        <div class="col-sm-3">
+            <p>Số lượng ghế còn lại:</p>
+        </div>
+        <div class="col-sm-2 ip-coachbox">
+            <input type="number" step="1" placeholder="Số lượng ghế trống">
+        </div>
+        <div class="col-sm-7">
+        </div>
+    </div>
+    <div class="row transports">
+        <div class="col-sm-3">
+            <p>Phương tiện di chuyển:</p>
+        </div>
+        <div class="col-sm-8 ip-transport">
+            <textarea rows="3" wrap="soft" placeholder="Mô tả phương tiện di duyển"></textarea>
+        </div>
+        <div class="col-sm-1">
+        </div>
+    </div>
+    <div class="row transports">
+        <div class="col-sm-3">
+            <p>Ảnh mô tả:</p>
+        </div>
+        <div class="col-sm-8 ip-transport">
+            <input type="file">
+        </div>
+        <div class="col-sm-1">
+        </div>
+    </div>
+
+
+    <br>
+    <div class="row dangki">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4 btn-update">
+            <button type="submit">Đăng bài viết</button>
+        </div>
+        <div class="col-sm-4">
+        </div>
+    </div>
+    <div class="row null">
+    </div>
+
+</form>
+{% endblock content %}

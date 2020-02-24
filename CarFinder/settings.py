@@ -129,6 +129,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
+MEDIA_URL = '/static/image/'
+MEDIA_ROOR = os.path.join(BASE_DIR, 'static/image')
+
 try:
     from CarFinder.local_settings import *
 except ImportError:
